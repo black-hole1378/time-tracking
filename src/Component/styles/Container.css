@@ -1,0 +1,49 @@
+.main-comment-container {
+   background-color: var(--white-color);
+   border-radius: 10px; 
+   display: flex;
+   flex-direction: row;
+   padding: 10px;
+}
+
+.right-container {
+    display: block;
+}
+
+.top-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 10px;
+    height: 40px;
+    align-items: center;
+}
+
+.top-container #left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-container #left #timeline-date {
+    font-size: 0.6rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(191, 197, 204);
+}
+
+.top-container button {
+   border: none;
+   background-color: transparent;
+   color:  hsl(238, 55%, 51%);
+   font-size: 0.6rem;
+   font-weight: bold;
+}
+
+.icon {
+    margin-bottom: 5px;
+}
+
+.top-container button:hover {
+    opacity: 0.5;
+}
