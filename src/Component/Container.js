@@ -1,43 +1,49 @@
-import React from "react";
-import DeacreasIncrease from "./DeacreasIncrease";
+import React, { Component } from "react";
+import Card from "./Card";
 import Profile from "./Profile";
-import "./styles/Container.css";
-import ReplyIcon from "@mui/icons-material/Reply";
-import { CommentContent } from "./styles/component_style";
-function Container(props) {
-  const {
-    id,
-    content,
-    createAt,
-    score,
-    user: { name, image },
-  } = props.comment;
+import "./styles/container.css";
+import data from "./data.json";
+import ErrorBoundary from "./ErrorBoundary";
+class Container extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: "Weekly",
+      selectedItem: data.map((item) => item.timeframes.weekly),
+    };
+  }
 
-  return (
-    <div className="main-comment-container container-fluid" id={id}>
-      <div className="left-container">
-        <DeacreasIncrease score={score} />
-      </div>
-      <div className="right-container">
-        <div className="top-container">
-          <div id="left">
-            <Profile
-              profileImage={image}
-              isOnlyImage={false}
-              profileName={name}
-            />
-            <p id="timeline-date">{createAt}</p>
-          </div>
-          <button type="button" onClick={() => props.reply(id)}>
-            {<ReplyIcon className="icon" />} Reply
-          </button>
+  changeItem = (item) => {
+    let value;
+    if (item === "Weekly") value = data.map((item) => item.timeframes.weekly);
+    else if (item === "Daily")
+      value = data.map((item) => item.timeframes.daily);
+    else value = data.map((item) => item.timeframes.monthly);
+    this.setState({
+      selected: item,
+      selectedItem: value,
+    });
+  };
+
+  render() {
+    return (
+      <div className="main-container">
+        <div className="row1">
+          <Profile
+            selected={this.state.selected}
+            changeItem={this.changeItem}
+          />
         </div>
-        <div className="bottom-bontainer">
-          <CommentContent>{content}</CommentContent>
+        <div className="row2">
+          {data.map((item, index) => (
+            <ErrorBoundary key={index}>
+              <Card data={item} select={this.state.selectedItem.at(index)} />
+            </ErrorBoundary>
+          ))}
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Container;

@@ -1,11 +1,11 @@
 import React from "react";
-import Main from "./Component/Main";
 import { BrowserRouter as Router } from "react-router-dom";
+import Container from "./Component/Container";
 function App() {
   return (
     <React.Fragment>
       <Router>
-        <Main />
+        <Container />
       </Router>
     </React.Fragment>
   );

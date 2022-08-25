@@ -1,0 +1,116 @@
+.profile-main-container {  
+    background-color: var(--Dark-blue);  
+    height: max-content;  
+    width: inherit;
+    height: inherit; 
+    border-radius: 10px;
+    display: block;        
+}
+
+.profile-container {
+   display: flex; 
+   background-color: var(--Blue);
+   height: 60%;   
+   width: 100%;
+   flex-direction: row;
+   align-items: center;
+   gap: 10px; 
+   border-radius: inherit; 
+   padding: 10px;
+}
+
+
+.profile-content-container {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.profile-content-container #report {
+   color: var(--pale-blue);  
+   font-size: 0.5rem;     
+}
+
+.profile-content-container #profile-name {
+   color: #fff;
+   font-size: 0.7rem;   
+}
+
+.profile-image-container {
+   display: flex; 
+   align-items: center; 
+   justify-content: center;  
+   background-color: #fff;
+   width: 34px; 
+   height: 34px;  
+   border-radius: 50%;   
+}
+
+.profile-image-container img {
+   width: 32px;  
+   height: 32px;  
+   border-radius: inherit;  
+}
+
+.period-list {
+    display: flex;
+    height: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.link {
+   font-size: 0.8rem;  
+   color: var(--pale-blue);
+   text-decoration: none;      
+}
+
+.link:hover {
+   color: #fff; 
+}
+
+.link--active {
+   color: #fff;
+}
+
+@media screen and (min-width: 900px) {
+   .period-list {
+      flex-direction: column;
+      align-items: flex-start;  
+      margin-left: 20px;
+      font-weight: 50; 
+   }
+
+   .profile-container {
+      padding: 15px;
+   }
+
+   .profile-image-container {
+      width: 48px; 
+      height: 48px;       
+   }
+
+   .profile-image-container img {
+     width: 45px; 
+     height: 45px; 
+   }
+
+   .profile-container {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      gap: 10px;  
+   }
+   
+   .profile-content-container #report {
+      font-size: 0.6rem;
+   }
+
+   .profile-content-container #profile-name {
+      font-size: 1.4rem;
+      color: whitesmoke;
+   }  
+
+   .profile-content-container {
+      justify-content: center;     
+   }
+}

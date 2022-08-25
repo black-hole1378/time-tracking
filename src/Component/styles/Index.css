@@ -1,17 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Kumbh+Sans:wght@500&family=Montserrat:wght@200&family=Rubik:wght@300&display=swap');
 :root {
-   --white-color:hsl(0, 0%, 100%);
-   --background-color: hsl(223, 19%, 93%); 
-   --gry-fish-blue-color: hsl(211, 10%, 45%);
-   --blue-color: hsl(239, 57%, 85%);  
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red : hsl(15, 100%, 70%);  
+    --Soft-blue: hsl(195, 74%, 62%);  
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);  
+    --Violet: hsl(264, 64%, 52%);  
+    --Soft-orange: hsl(43, 84%, 65%);
+    --Dark-blue: hsl(235, 46%, 20%);  
+    --very-dark: hsl(226, 43%, 10%);  
+    --Desaturated: hsl(235, 45%, 61%);  
+    --pale-blue: hsl(236, 100%, 87%);   
 }
+
+/* - Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%) */
+/* - Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%) */
+
+
 * {
-   padding: 0;  
-   box-sizing: border-box;
-   margin: 0; 
+    padding: 0;  
+    margin: 0; 
+    box-sizing: border-box;  
+    font-family: 'Rubik', sans-serif; 
 }
 
 body {
-   width: 100%;
-   height: 100vh;
-   background-color: var(--background-color);
+    background-color: var(--very-dark);
 }
